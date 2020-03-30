@@ -6914,10 +6914,6 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
-.bg-primary {
-  background-color: #303030 !important;
-}
-
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -10874,4 +10870,53 @@ form .row:first-child .floating-label-form-group {
   color: #303030;
   font-size: 20px;
   background-color: #00d0ff;
+}
+
+video#bgvid { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(/img/space_bg.png) no-repeat;
+  background-size: cover; 
+}
+
+.bg-primary {
+  /*leave this empty for space background*/
+  }
+
+.floaty-lad{
+  position: relative;
+  white-space: nowrap;
+  animation: floatText 1s infinite alternate ease-in-out;
+}
+
+@keyframes floatText{
+from {
+  top: 0px;
+  left: 0px;
+  transform: rotate(-3deg);
+}
+
+to {
+  /* left: auto; */
+  top: 20px;
+  left: 10px;
+  transform: rotate(0deg);
+}
+}
+
+@media(max-width: 767px)
+{
+.float-text{
+  display: none !important;
+}
 }
