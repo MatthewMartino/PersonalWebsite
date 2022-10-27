@@ -68,6 +68,10 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 [tabindex="-1"]:focus {
@@ -10864,6 +10868,8 @@ form .row:first-child .floating-label-form-group {
   padding-bottom: 5rem;
   background-color: #151515;
   color: #fff;
+
+  margin-top: auto;
 }
 
 .copyright {
